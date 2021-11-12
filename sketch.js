@@ -20,14 +20,14 @@ function preload(){
 
 function setup(){
   
-//create the canvas and adjust the window sizes to suit the device 
+//crear el canvas y ajustar el tamaño de la ventana para que sea compatible con el dispositivo 
 
 path=createSprite(width/2,200);
 path.addImage(pathImg);
 path.velocityY = 4;
 
 
-//creating boy running
+//crear sprite boy corriendo
 boy = createSprite(width/2,height-20,20,20);
 boy.addAnimation("SahilRunning",boyImg);
 boy.scale=0.08;
@@ -49,7 +49,7 @@ function draw() {
   edges= createEdgeSprites();
   boy.collide(edges);
   
-  //code to reset the background
+  //código para reiniciar el fondo
 
     createCash();
     createDiamonds();
@@ -93,14 +93,14 @@ function draw() {
   drawSprites();
   textSize(20);
   fill(255);
-  text("Treasure: "+ treasureCollection,width-150,30);
+  text("Tesoro: "+ treasureCollection,width-150,30);
   }
 
 }
 
 function createCash() {
   if (World.frameCount % 200 == 0) {
-   // Modify the positions of cash 
+   //Modificar las posiciones del dinero 
     var cash = createSprite(Math.round(random(50, 350),40, 10, 10));
     cash.addImage(cashImg);
   cash.scale=0.12;
@@ -112,7 +112,7 @@ function createCash() {
 
 function createDiamonds() {
   if (World.frameCount % 320 == 0) {
-       // Modify the positions of diamonds 
+       // Modificar las posiciones de los diamantes 
 
     var diamonds = createSprite(Math.round(random(50, 350),40, 10, 10));
     diamonds.addImage(diamondsImg);
@@ -125,7 +125,7 @@ function createDiamonds() {
 
 function createJwellery() {
   if (World.frameCount % 410 == 0) {
-    //   Modify the positions of jwellery to make them spawn throughout the available screen size.
+    //Modificar las posiciones de las joyas para hacerlas aparecer en el tamaño de pantaña disponible.
 
     var jwellery = createSprite(Math.round(random(50, 350),40, 10, 10));
     jwellery.addImage(jwelleryImg);
@@ -138,7 +138,7 @@ function createJwellery() {
 
 function createSword(){
   if (World.frameCount % 530 == 0) {
-    //   Modify the positions of sword to make them spawn throughout the available screen size.
+    //Modificar las prosiciones de la espada para hacerla aparecer en el tamaño de pantaña disponible. 
 
     var sword = createSprite(Math.round(random(50, 350),40, 10, 10));
     sword.addImage(swordImg);
